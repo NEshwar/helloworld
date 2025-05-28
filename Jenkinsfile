@@ -1,21 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Fluffy Build') {
+    stage('Buzz Build') {
       steps {
-        echo 'Placeholder'
-        bat 'echo Edited Placeholder.'
+        sh './jenkins/build.sh'
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
-    stage('Fluffy Test') {
+        stage('Buzz Test') {
       steps {
-        bat 'timeout 5'
-        bat 'echo Success!'
-      }
-    }
-    stage('Fluffy Deploy') {
-      steps {
-        echo 'Placeholder'
+        sh './jenkins/test-all.sh'
       }
     }
   }
