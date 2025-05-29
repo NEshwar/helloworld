@@ -7,6 +7,7 @@ pipeline {
         echo 'I am a ${BUZZ_NAME}'
         echo 'Buzz Test'
         sh 'echo Edited Placeholder'
+        sh './jenkins/build.sh'
       }
     }
 
