@@ -8,6 +8,7 @@ pipeline {
         echo 'Buzz Test'
         sh 'echo Edited Placeholder'
         sh './jenkins/build.sh'
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
