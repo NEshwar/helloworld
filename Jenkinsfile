@@ -12,9 +12,21 @@ pipeline {
     }
 
     stage('Fluffy Test') {
-      steps {
-        sh 'sleep 5'
-        sh 'echo Success!'
+      parallel {
+        stage('Fluffy Test') {
+          steps {
+            sh 'sleep 5'
+            sh 'echo Success!'
+          }
+        }
+
+        stage('') {
+          steps {
+            sh '''sleep 10
+echo done'''
+          }
+        }
+
       }
     }
 
