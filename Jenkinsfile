@@ -3,11 +3,11 @@ pipeline {
   stages {
     stage('Buzz Build') {
       steps {
-        echo 'I am a ${BUZZ_NAME}'
         echo 'Buzz Test'
         sh 'echo Edited Placeholder'
         sh './jenkins/build.sh'
         archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+        sh 'echo "I am a ${BUZZ_NAME}"'
       }
     }
 
