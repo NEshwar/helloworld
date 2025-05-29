@@ -6,6 +6,20 @@ pipeline {
       steps {
         echo 'I am a ${BUZZ_NAME}'
         echo 'Buzz Test'
+        sh 'echo Edited Placeholder'
+      }
+    }
+
+    stage('Fluffy Test') {
+      steps {
+        sh 'sleep 5'
+        sh 'echo Success!'
+      }
+    }
+
+    stage('Fluffy Deploy') {
+      steps {
+        echo 'Placeholder'
       }
     }
 
