@@ -43,9 +43,9 @@
 <!-- 						<muleVersion>${muleVersion}</muleVersion> -->
 						<businessGroup>${businessGroup}</businessGroup>
 						<javaVersion>17</javaVersion>
-<!-- 						<server>anypoint-exchange-v3</server> -->
-						<username>${anypoint.clientId}</username>
-            			<password>${anypoint.clientSecret}</password>
+						<server>anypoint-exchange-v3</server>
+<!-- 						<username>${anypoint.clientId}</username> -->
+<!--             			<password>${anypoint.clientSecret}</password> -->
 						<applicationName>${appName}</applicationName>
 						<releaseChannel>EDGE</releaseChannel>
 						<replicas>1</replicas>
@@ -106,13 +106,13 @@
 			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</pluginRepository>
 	</pluginRepositories>
-<!-- 	<distributionManagement> -->
-<!-- 		<repository> -->
-<!-- 			<id>anypoint-exchange-v3</id> -->
-<!-- 			<name>Corporate Repository</name> -->
-<!-- 			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url> -->
-<!-- 			<layout>default</layout> -->
-<!-- 		</repository> -->
-<!-- 	</distributionManagement> -->
+	<distributionManagement>
+		<repository>
+			<id>anypoint-exchange-v3</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 
 </project>
