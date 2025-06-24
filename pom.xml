@@ -43,7 +43,9 @@
 <!-- 						<muleVersion>${muleVersion}</muleVersion> -->
 						<businessGroup>${businessGroup}</businessGroup>
 						<javaVersion>17</javaVersion>
-						<server>anypoint-exchange-v3</server>
+<!-- 						<server>anypoint-exchange-v3</server> -->
+						<username>${anypoint.clientId}</username>
+            			<password>${anypoint.clientSecret}</password>
 						<applicationName>${appName}</applicationName>
 						<releaseChannel>EDGE</releaseChannel>
 						<replicas>1</replicas>
