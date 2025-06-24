@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/wsc http://www.mulesoft.org/schema/mule/wsc/
 output application/json
 ---
 {
-	message: "this is a message from Mule API"
+	message: "this is a message from Mule API via Jenkins CICD Deployment and Git SCM Hook"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
