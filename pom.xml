@@ -4,7 +4,7 @@
 
 	<groupId>05d3c689-eecc-46b9-9293-a4be4f4bc93e</groupId>
 	<artifactId>helloworld</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<packaging>mule-application</packaging>
 
 	<name>helloworld</name>
@@ -68,12 +68,6 @@
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.5</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.connectors</groupId>
-			<artifactId>mule-wsc-connector</artifactId>
-			<version>1.11.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
