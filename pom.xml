@@ -4,7 +4,7 @@
 
 	<groupId>05d3c689-eecc-46b9-9293-a4be4f4bc93e</groupId>
 	<artifactId>helloworld</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<packaging>mule-application</packaging>
 
 	<name>helloworld</name>
