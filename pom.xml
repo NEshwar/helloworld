@@ -19,6 +19,7 @@
 		<tags/>
 		<categories>[]</categories>
 		<fields>[]</fields>
+		<munit.version>3.2.1</munit.version>
 	</properties>
 
 	<build>
@@ -40,17 +41,56 @@
 						<provider>MC</provider>
 						<environment>${environment}</environment>
 						<target>${targetName}</target>
-<!-- 						<muleVersion>${muleVersion}</muleVersion> -->
+						<!-- 						<muleVersion>${muleVersion}</muleVersion> -->
 						<businessGroup>${businessGroup}</businessGroup>
 						<javaVersion>17</javaVersion>
 						<server>anypoint-exchange-v3</server>
-<!-- 						<username>${anypoint.clientId}</username> -->
-<!--             			<password>${anypoint.clientSecret}</password> -->
+						<!-- 						<username>${anypoint.clientId}</username> -->
+						<!--             			<password>${anypoint.clientSecret}</password> -->
 						<applicationName>${appName}</applicationName>
 						<releaseChannel>EDGE</releaseChannel>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 					</cloudhub2Deployment>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+							<goal>coverage-report</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<formats>
+							<format>html</format>
+							<format>console</format>
+							<format>json</format>
+						</formats>
+						<failBuild>true</failBuild>
+						<requiredApplicationCoverage>75</requiredApplicationCoverage>
+			            <requiredResourceCoverage>75</requiredResourceCoverage>
+			            <requiredFlowCoverage>75</requiredFlowCoverage>
+<!-- 			            <ignoreFlows> -->
+<!-- 					        <ignoreFlow>flow-1</ignoreFlow> -->
+<!-- 					        <ignoreFlow>flow-2</ignoreFlow> -->
+<!-- 					        <ignoreFlow>flow-n</ignoreFlow> -->
+<!-- 					    </ignoreFlows> -->
+<!-- 					    <ignoreFiles> -->
+<!-- 						    <ignoreFile>mule-config-1.xml</ignoreFile> -->
+<!-- 						    <ignoreFile>mule-config-2.xml</ignoreFile> -->
+<!-- 						    <ignoreFile>mule-config-n.xml</ignoreFile> -->
+<!-- 						</ignoreFiles> -->
+					</coverage>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -73,6 +113,26 @@
 			<artifactId>mule-wsc-connector</artifactId>
 			<version>1.11.2</version>
 			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-runner</artifactId>
+			<version>3.4.0</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-tools</artifactId>
+			<version>3.4.0</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.weave</groupId>
+			<artifactId>assertions</artifactId>
+			<version>1.2.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
