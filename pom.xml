@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>05d3c689-eecc-46b9-9293-a4be4f4bc93e</groupId>
+	<groupId>fae2c878-5f34-419b-b999-bc1cd0ecebd8</groupId>
 	<artifactId>helloworld</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>helloworld</name>
